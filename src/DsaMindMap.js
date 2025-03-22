@@ -2,8 +2,63 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const topics = [
-  // same topic data structure as before
-  // (left unchanged for brevity)
+  {
+    name: 'Arrays & Hashing',
+    time: '5-7 days',
+    scalerLectures: [
+      'DSA 1: Arrays 1 — One Dimensional',
+      'DSA 1: Arrays 2 — Two Dimensional',
+      'DSA 1: Arrays 3 — Interview Problems',
+      'DSA 1: Hashing 1 — Introduction',
+      'DSA 1: Hashing 2 — Problems'
+    ],
+    unlockedBy: [],
+    position: { row: 0, col: 2 }
+  },
+  {
+    name: 'Two Pointers',
+    time: '3-4 days',
+    scalerLectures: ['DSA 3: Lab Session on Maths & 2 Pointers'],
+    unlockedBy: ['Arrays & Hashing'],
+    position: { row: 1, col: 1 }
+  },
+  {
+    name: 'Stack',
+    time: '2-3 days',
+    scalerLectures: ['DSA 2: Stacks', 'DSA 2: Lab Session on Stacks'],
+    unlockedBy: ['Arrays & Hashing'],
+    position: { row: 1, col: 3 }
+  },
+  {
+    name: 'Binary Search',
+    time: '3-4 days',
+    scalerLectures: [
+      'DSA 2: Searching 1 — Binary Search on Array',
+      'DSA 2: Searching 2 — Binary Search Problems',
+      'DSA 2: Searching 3 — Binary Search on Answer'
+    ],
+    unlockedBy: ['Two Pointers'],
+    position: { row: 2, col: 0 }
+  },
+  {
+    name: 'Sliding Window',
+    time: '3 days',
+    scalerLectures: ['DSA 1: Sliding Window & Prefix Sum'],
+    unlockedBy: ['Two Pointers'],
+    position: { row: 2, col: 2 }
+  },
+  {
+    name: 'Linked List',
+    time: '4-5 days',
+    scalerLectures: [
+      'DSA 2: Linked List: Basic Problems',
+      'DSA 2: Linked List: Sorting and Problems',
+      'DSA 2: Linked List: Doubly Linked List & Detecting Loop',
+      'DSA 2: Linked List: Leftover Problems'
+    ],
+    unlockedBy: ['Stack'],
+    position: { row: 2, col: 4 }
+  }
 ];
 
 export default function DsaMindMap() {
