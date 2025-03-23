@@ -84,10 +84,10 @@ export default function DsaMindMap() {
           source.unlockedBy.map(dep => {
             const from = topics.find(t => t.name === dep);
             if (!from) return null;
-            const x1 = (from.position.col + 0.5) * 260;
-            const y1 = (from.position.row + 1) * 200;
-            const x2 = (source.position.col + 0.5) * 260;
-            const y2 = source.position.row * 200;
+            const x1 = (from.position.col + 0.5) * 280;
+            const y1 = (from.position.row + 1) * 220;
+            const x2 = (source.position.col + 0.5) * 280;
+            const y2 = source.position.row * 220;
             return (
               <line
                 key={from.name + '-' + source.name}
@@ -113,8 +113,8 @@ export default function DsaMindMap() {
         className="relative z-10"
         style={{
           display: 'grid',
-          gridTemplateRows: `repeat(${maxRow + 1}, 200px)`,
-          gridTemplateColumns: `repeat(${maxCol + 1}, 260px)`
+          gridTemplateRows: `repeat(${maxRow + 1}, 220px)`,
+          gridTemplateColumns: `repeat(${maxCol + 1}, 280px)`
         }}
       >
         {topics.map((t, index) => (
@@ -123,8 +123,8 @@ export default function DsaMindMap() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.05 }}
-            className={`absolute p-4 rounded-xl shadow-lg bg-gray-800 text-white border border-purple-500 w-60 transition-opacity duration-300 ${!isUnlocked(t) ? 'opacity-30 pointer-events-none' : ''}`}
-            style={{ top: `${t.position.row * 200}px`, left: `${t.position.col * 260}px` }}
+            className={`absolute p-4 rounded-xl shadow-lg bg-gray-800 text-white border border-purple-500 w-64 transition-opacity duration-300 ${!isUnlocked(t) ? 'opacity-30 pointer-events-none' : ''}`}
+            style={{ top: `${t.position.row * 220}px`, left: `${t.position.col * 280}px` }}
           >
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-lg font-semibold">{t.name}</h2>
